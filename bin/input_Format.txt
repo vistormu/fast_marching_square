@@ -9,10 +9,29 @@ Isotropic2
 exportValues
 0
 
-cost
+gridScale
+0
+
+order
+0
+
+origin
+1
+2
+
+speed
 2
 100
 100
+
+walls
+2
+100
+100
+
+dims
+1
+2
 
 tips
 2
@@ -21,17 +40,6 @@ tips
 
 seeds
 2
-1
-2
-
-gridScale
-0
-
-dims
-1
-2
-
-origin
 1
 2
 

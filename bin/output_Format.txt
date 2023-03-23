@@ -12,7 +12,7 @@ StencilCPUTime
 
 defaulted
 -1
-exportActiveNeighs exportActiveOffsets exportGeodesicFlow geodesicSolver geodesicStep geodesicVolumeBound geodesicWeightThreshold order refineStencilAtWallBoundary seedRadius showProgress verbosity 
+exportActiveNeighs exportActiveOffsets exportGeodesicFlow geodesicSolver geodesicStep geodesicVolumeBound geodesicWeightThreshold refineStencilAtWallBoundary seedRadius showProgress verbosity 
 
 geodesicLengths
 1
@@ -20,7 +20,7 @@ geodesicLengths
 
 geodesicPoints
 2
-206
+233
 2
 
 nAccepted
@@ -37,5 +37,5 @@ values
 
 visitedUnset
 -1
-activeNeighs costVariation euclideanScale factoringRadius factoringValues getStencils gridScales indexToPoint inspectSensitivity keyHelp nMaxAccepted pointToIndex progressReportLandmarks seedFlags seedValueVariation seedValues speed speed_times stopAtDistance stopWhenAllAccepted stopWhenAnyAccepted values walls 
+activeNeighs costVariation euclideanScale factoringRadius factoringValues getStencils gridScales indexToPoint inspectSensitivity keyHelp nMaxAccepted pointToIndex progressReportLandmarks seedFlags seedValueVariation seedValues stopAtDistance stopWhenAllAccepted stopWhenAnyAccepted values 
 
