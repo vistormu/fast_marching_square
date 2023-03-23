@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fast-marching-square"
+version = "0.0.1"
+authors = [
+  { name="Vistor"},
+]
+description = "Fast Marching Square (FM2) is a path planning algorithm based on the Fast Marching Method that solves the Eikonal equation."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "agd",
+    "scipy",
+    "vclog",
+]
+
+[tool.setuptools.package-data]
+# "*" = ["*.csv", "*.stl", "*.xml"]
+
+[project.urls]
+"Homepage" = "https://github.com/vistormu/fast_marching_square"
+"Bug Tracker" = "https://github.com/vistormu/fast_marching_square/issues"
