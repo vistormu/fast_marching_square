@@ -26,6 +26,7 @@ dependencies = [
 
 [tool.setuptools.package-data]
 # "*" = ["*.csv", "*.stl", "*.xml"]
+"*" = ["bin/**"]
 
 [project.urls]
 "Homepage" = "https://github.com/vistormu/fast_marching_square"

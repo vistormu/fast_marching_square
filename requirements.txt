@@ -1,5 +1,3 @@
-vclog
 numpy
 agd
-matplotlib
 scipy

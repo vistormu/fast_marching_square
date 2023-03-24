@@ -1,0 +1,42 @@
+FMCPUTime
+0
+
+GeodesicCPUTime
+0
+
+MaxStencilWidth
+0
+
+StencilCPUTime
+0
+
+defaulted
+-1
+exportActiveNeighs exportActiveOffsets exportGeodesicFlow geodesicSolver geodesicStep geodesicVolumeBound geodesicWeightThreshold order refineStencilAtWallBoundary seedRadius showProgress 
+
+geodesicLengths
+1
+1
+
+geodesicPoints
+2
+717
+3
+
+nAccepted
+0
+
+unusedFromCompute
+-1
+FMCPUTime GeodesicCPUTime MaxStencilWidth StencilCPUTime geodesicLengths geodesicPoints nAccepted values 
+
+values
+3
+100
+100
+100
+
+visitedUnset
+-1
+activeNeighs costVariation euclideanScale factoringRadius factoringValues getStencils gridScales indexToPoint inspectSensitivity keyHelp nMaxAccepted pointToIndex progressReportLandmarks seedFlags seedValueVariation seedValues stopAtDistance stopWhenAllAccepted stopWhenAnyAccepted values walls 
+
