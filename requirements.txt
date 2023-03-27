@@ -1,3 +1,4 @@
 numpy
 agd
 scipy
+pillow

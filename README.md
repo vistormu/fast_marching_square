@@ -29,7 +29,7 @@ pip install fast-marching-square
 ### Install from source
 Firstly, clone the repository in your system.
 ```bash
-git clone https://github.com/vistormu/fast_marching-square.git
+git clone https://github.com/vistormu/fast_marching_square.git
 ```
 
 Then, enter the directory and install the required dependencies

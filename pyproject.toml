@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fast-marching-square"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Vistor"},
 ]
@@ -18,10 +18,8 @@ classifiers = [
 ]
 dependencies = [
     "numpy",
-    "matplotlib",
     "agd",
-    "scipy",
-    "vclog",
+    "pillow",
 ]
 
 [tool.setuptools.package-data]
