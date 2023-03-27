@@ -1,0 +1,9 @@
+nbsphinx
+docutils
+sphinx
+sphinx_rtd_theme
+readthedocs-sphinx-search
+numpydoc
+numpy
+agd
+scipy

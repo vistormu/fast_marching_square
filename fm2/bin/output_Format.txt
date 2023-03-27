@@ -20,7 +20,7 @@ geodesicLengths
 
 geodesicPoints
 2
-717
+590
 3
 
 nAccepted

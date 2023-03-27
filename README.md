@@ -8,7 +8,7 @@ This implementation of the Fast Marching Squared method is based on the [Mirebea
 
 Follow the next steps for installing the simulation on your device.
 
-**Requierements:**
+**Requirements:**
 - Python 3.10.0 or higher
 
 

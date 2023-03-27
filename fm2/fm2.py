@@ -6,7 +6,32 @@ from .entities import FM2Map, FM2Info
 
 
 class FM2:
+    '''
+    The `FM2` class contains all the methods for calculating a path with the Fast Marching Square Method.
+
+    Methods
+    -------
+    set_map(self, fm2_map: FM2Map) -> None:
+        sets the map in which to calculate the path
+
+    get_path(self, starting_point: tuple[int, int] | tuple[int, int, int], goal_point: tuple[int, int] | tuple[int, int, int]) -> FM2Info:
+        gets the path given a start point and a goal point
+    '''
+
     def __init__(self, mode: str = 'cpu') -> None:
+        '''
+        Parameters
+        ----------
+        mode : str, optional
+            execute in cpu or in gpu. Default 'cpu'
+
+        Note
+        ----
+        GPU mode is not supported yet
+        '''
+        if mode == 'gpu':
+            raise NotImplementedError('GPU mode is not implemented')
+
         self.hfm_in: Eikonal.dictIn = Eikonal.dictIn({
             'verbosity': 0,
             'mode': mode,
@@ -15,6 +40,14 @@ class FM2:
         })
 
     def set_map(self, fm2_map: FM2Map) -> None:
+        '''
+        sets the map in which to calculate the path
+
+        Parameters
+        ----------
+        fm2_map : ~.entities.FM2Map
+            the specified map
+        '''
         map_dict: dict = {
             'model': 'Isotropic2' if fm2_map.dimensions == 2 else 'Isotropic3',
             'speed': fm2_map.w_matrix,
@@ -24,9 +57,26 @@ class FM2:
 
         self.hfm_in.update(map_dict)
 
-    def get_path(self, starting_point: tuple[int, int] | tuple[int, int, int], goal_point: tuple[int, int] | tuple[int, int, int]) -> FM2Info:
+    def get_path(self, start_point: tuple[int, int] | tuple[int, int, int], goal_point: tuple[int, int] | tuple[int, int, int]) -> FM2Info:
+        '''
+        returns the path given a start point and a goal point
+
+        Parameters
+        ----------
+        start_point : tuple[int, int] | tuple[int, int, int]
+            the start point of the path
+
+        goal_point : tuple[int, int] | tuple[int, int, int]
+            the goal point of the path
+
+        Returns
+        -------
+        out : ~.entities.FM2Info
+            the info of the calculated path
+        '''
+
         points_dict: dict = {
-            'tip': starting_point,
+            'tip': start_point,
             'seed': goal_point,
         }
 
@@ -41,20 +91,3 @@ class FM2:
             path_found = False
 
         return FM2Info(path if path_found else None, hfm_out['values'])
-
-    @staticmethod
-    def _gradient_descent(matrix, start_point, learning_rate, num_iterations):
-        x, y = start_point
-        path = [(x, y)]
-        value = matrix[x][y]
-
-        for i in range(num_iterations):
-            dx, dy = np.gradient(matrix)
-            x -= learning_rate * dx[int(x)][int(y)]
-            y -= learning_rate * dy[int(x)][int(y)]
-            x = np.clip(x, 0, matrix.shape[0]-1)
-            y = np.clip(y, 0, matrix.shape[1]-1)
-            path.append((x, y))
-            value = matrix[int(x)][int(y)]
-
-        return (path, value)

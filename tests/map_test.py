@@ -40,12 +40,13 @@ def main():
     plt.show()
 
     # 3D map
-    image: np.ndarray = np.ones((100, 100, 100))
-    image[25:75, 25:75, 0:50] = 0.0
+    image: np.ndarray = np.ones((9, 9, 9))
+    image[4, 4, 4] = 0.0
 
-    fm2_map: FM2Map = FM2Map.from_binary_map(image)
+    fm2_map: FM2Map = FM2Map.from_binary_map(image, create_border=True)
 
     map_to_plot = 1 - fm2_map.binary_map
+    map_to_plot[0, 2:6, 2:6] = 0.0
 
     ax = plt.figure().add_subplot(projection='3d')
     ax.voxels(map_to_plot, facecolors='red', edgecolor='k')

@@ -74,7 +74,7 @@ def main():
     image: np.ndarray = np.ones((100, 100, 100))
     image[25:75, 25:75, 0:50] = 0.0
 
-    fm2_map: FM2Map = FM2Map.from_binary_map(image)
+    fm2_map: FM2Map = FM2Map.from_binary_map(image, create_border=True)
 
     fm2.set_map(fm2_map)
 
